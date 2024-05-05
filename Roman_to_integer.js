@@ -17,22 +17,19 @@ var romanToInt = function(s) {
             };
   
     let arr = s.split('')
-    console.log({arr})
-    let length = arr.length
-    for(let i = length-1; i >= 0; i--){
+    for(let i = arr.length-1; i >= 0; i--){
         let number = romanNumerals[arr[i]];
         if (romanNumerals[arr[i]]<romanNumerals[arr[i+1]]){
             sum = sum - number
-            console.log('sum1', sum)
         }else{
             sum = sum + number
-            console.log('sum2', sum)
         }
 
     }
 
     return sum;
 };
+
 
 
 
