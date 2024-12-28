@@ -60,4 +60,5 @@ var isZeroArray = function (nums, queries) {
 // Space Complexity:
 // Difference array:O(n).
 // Total: O(n).
+
 // }
