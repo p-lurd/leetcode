@@ -15,4 +15,23 @@ var removeElement = function(nums, val) {
 };
 
 nums = [0,1,2,2,3,0,4,2]
+
+
+
+
+var removeElement = function(nums, val) {
+    nums.sort(function(a, b){return a-b});
+    let i = nums.indexOf(val);
+    let n = nums.length;
+    while (i < n) {
+        if (nums[i] === val) {
+            nums[i] = nums[n - 1];
+            n--;
+        } else {
+            i++;
+        }
+    }
+    return n;
+};
+
 console.log(removeElement(nums,2))
